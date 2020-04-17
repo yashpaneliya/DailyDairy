@@ -47,7 +47,7 @@ class _CartState extends State<Cart> {
   }
 
   Widget displayData() {
-    return ListView.builder(
+    return cartNameList==null?Container(width:40.0,height:40.0,alignment:Alignment.center,child: CircularProgressIndicator()):ListView.builder(
         itemCount: cartProduct.length,
         itemBuilder: (context, index) {
           return Dismissible(
