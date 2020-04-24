@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:temp_daily_app/Screens/productDetails.dart';
+import 'productDetails.dart';
 QuerySnapshot qn, snapshot;
 String index;
 class cheeseProduct extends StatefulWidget {
