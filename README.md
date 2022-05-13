@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-# Daily_Dairy
-
-A flutter e-commerce application for dairy products.
-In this app you can subscribe a plan for milk like weekely, monthly and yearly. You can aslo choose a custom plan(day-wise). You can buy different dairy products like cheese,paneer,butter etc. It has a payment gateway option also.
-
-I have used FireBase Cloud Firestore for user database
-
-Screens / Pages of Application:
-1. Login Page
-2. Signup Page
-3. Home Page
-    1. Milk Products
-    1. Cheese Products
-    1. Paneer Products
-    1. Butter Products
-4. Profile Page
-5. Cart\n
-    -> Payment Gateway
-6. Subscribed Plan
-    -> Change Plan
-        -> Address & Products Sheet
-    -> Pause Plan
-7. Settings
-    -> Complain
-    -> Visit us
-    -> Developers
-    -> Share
-    -> Log out
-=======
-# Daily Dairy
 
 A new E-commerce Flutter application to meet your <b>Daily Dairy products</b> requirements. Me and my team <b>(Team Esquires)</b> have developed this application for the <b>Smart Gujarat Hacakthon 2020 (SSIP)</b> which is a state level hackathon organized by the Government of Gujarat. We have also participated in the <b>DSC Solution Challenge-2020</b> with this project.
 
