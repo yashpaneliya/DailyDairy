@@ -7,7 +7,11 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
+<<<<<<< HEAD
         android:label="temp_daily_app"
+=======
+        android:label="Daily Dairy"
+>>>>>>> 2d7bfeab1ba515f4b69a183ba44578149ba7258f
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

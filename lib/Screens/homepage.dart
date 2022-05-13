@@ -47,7 +47,17 @@ class HomeState extends State<HomePage> with SingleTickerProviderStateMixin {
               fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        elevation: 0.0,),
+        elevation: 0.0,
+//        actions: <Widget>[
+//          IconButton(
+//            icon: Icon(
+//              Icons.notifications,
+//              color: Color.fromRGBO(22, 102, 225, 1),
+//            ),
+//            onPressed: () {},
+//          )
+//        ],
+      ),
       body: DoubleBackToCloseApp(
         snackBar: const SnackBar(content: Text('Tap Back to exit')),
         child: PageStorage(

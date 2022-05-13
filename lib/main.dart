@@ -210,7 +210,6 @@ class LoginState extends State<LoginPage> {
         AuthResult user = await FirebaseAuth.instance
             .signInWithEmailAndPassword(email: email, password: password);
         widget.onSignedIn();
-
       } catch (e) {
         print(e);
       }

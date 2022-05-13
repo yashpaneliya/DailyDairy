@@ -87,34 +87,21 @@ class _ProductDetailsState extends State<ProductDetails> {
       ),
       body: ListView(
         children: <Widget>[
-          SizedBox(
-            height: 15.0,
-          ),
           Padding(
             padding: EdgeInsets.only(left: 20.0),
             child: Text(
               'Product Details',
               style: TextStyle(
                   fontFamily: 'Varela',
-                  fontSize: 42.0,
+                  fontSize: 35.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
           ),
-          SizedBox(
-            height: 15.0,
-          ),
           Hero(
             tag: assetPath,
-            child: Image.asset(
-              assetPath,
-              height: 250.0,
-              width: 100.0,
-              fit: BoxFit.contain,
-            ),
-          ),
-          SizedBox(
-            height: 20.0,
+            child: Image.network(
+                assetPath),
           ),
           Center(
             child: Container(
@@ -156,9 +143,6 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ),
           ),
-          SizedBox(
-            height: 20.0,
-          ),
           Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -182,19 +166,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ),
                 Container(
                   width: 30.0,
-                  child: TextField(
-                    keyboardType: TextInputType.number,
-                    onEditingComplete: () {
-                      setState(() {
-                        counter = textController.text as int;
-                      });
-                    },
-                    controller: textController,
-                    cursorColor: Colors.black,
-                    onChanged: (input) {
-                      counter = textController.text as int;
-                    },
-                  ),
+//                  child: TextField(
+//                    keyboardType: TextInputType.number,
+//                    controller: textController,
+//                    cursorColor: Colors.black,
+//                  ),
+                child: Text(
+                  '$counter'
+                ),
                 ),
                 SizedBox(
                   width: 30.0,
@@ -206,10 +185,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                     setState(() {
                       counter = int.parse(textController.text);
                       counter++;
-                      if (counter > 10) {
-                        counter = 10;
+                      if (counter > 5) {
+                        counter = 5;
                         Toast.show(
-                            'You can not order more than 10 at once!!', context,
+                            'You can not order more than 5 at once!!', context,
                             textColor: Colors.white,
                             backgroundColor: Colors.black);
                       }
@@ -232,15 +211,27 @@ class _ProductDetailsState extends State<ProductDetails> {
               color: Color.fromRGBO(22, 102, 225, 1),
               onPressed: () {
                 setState(() {
-                  map['$name'] = counter.toString();
-                  int itemPrice = int.parse(this.price);
-                  sum = sum + (counter * itemPrice);
-                  putdata();
+                  if (counter > 5) {
+                    counter = 5;
+                    textController.text='5';
+                    Toast.show(
+                        'You can not order more than 5 at once!!', context,
+                        textColor: Colors.white,
+                        backgroundColor: Colors.black);
+                  }
+                  else
+                    {
+                      map['$name'] = counter.toString();
+                      int itemPrice = int.parse(this.price);
+                      sum = sum + (counter * itemPrice);
+                      putdata();
+                      Toast.show("Added to Cart", context,
+                          duration: Toast.LENGTH_SHORT,
+                          gravity: Toast.CENTER,
+                          backgroundColor: Color.fromRGBO(22, 102, 225, .8));
+                    }
                 });
-                Toast.show("Added to Cart", context,
-                    duration: Toast.LENGTH_SHORT,
-                    gravity: Toast.CENTER,
-                    backgroundColor: Color.fromRGBO(22, 102, 225, .8));
+
               },
               child: Text(
                 'Add to Cart',

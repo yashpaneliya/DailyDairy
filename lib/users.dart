@@ -31,7 +31,6 @@ class users {
       'product':map,
     });
   }
-
   @override
   Future<String> currentUser() async{
     final FirebaseUser user= await FirebaseAuth.instance.currentUser();

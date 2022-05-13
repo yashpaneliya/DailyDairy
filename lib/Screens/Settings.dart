@@ -5,7 +5,7 @@ import 'package:temp_daily_app/authentication/auth_provider.dart';
 import 'package:temp_daily_app/main.dart';
 
 class Settings extends StatefulWidget {
-    final VoidCallback onSignedOut;
+  final VoidCallback onSignedOut;
 
   const Settings({Key key, this.onSignedOut});
 

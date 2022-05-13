@@ -22,6 +22,10 @@ dependencies:
   firebase_auth:
   firebase_core:
   cloud_firestore:
+<<<<<<< HEAD
+=======
+  firebase_storage:
+>>>>>>> 2d7bfeab1ba515f4b69a183ba44578149ba7258f
   double_back_to_close_app:
   percent_indicator:
   bot_toast:
