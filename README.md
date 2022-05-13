@@ -14,7 +14,7 @@ Screens / Pages of Application:
     1. Paneer Products
     1. Butter Products
 4. Profile Page
-5. Cart
+5. Cart\n
     -> Payment Gateway
 6. Subscribed Plan
     -> Change Plan

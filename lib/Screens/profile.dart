@@ -63,31 +63,31 @@ class _ProfilePageState extends State<ProfilePage> {
           SizedBox(
             height: 10.0,
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(left: 40.0),
-                child: Text(
-                  "$name".toUpperCase(),
-                  style: TextStyle(
-                      fontSize: 40.0,
-                      color: Color.fromRGBO(22, 102, 225, 1),
-                      fontWeight: FontWeight.bold),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(left: 40.0),
+                  child: Text(
+                    "$name".toUpperCase(),
+                    style: TextStyle(
+                        fontSize: 40.0,
+                        color: Color.fromRGBO(22, 102, 225, 1),
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 40.0),
-                child: Text(
-                  "$surname".toUpperCase(),
-                  style: TextStyle(
-                      fontSize: 40.0,
-                      color: Color.fromRGBO(22, 102, 225, 1),
-                      fontWeight: FontWeight.bold),
-                ),
-              )
-            ],
-          ),
+                Container(
+                  padding: EdgeInsets.only(left: 40.0),
+                  child: Text(
+                    "$surname".toUpperCase(),
+                    style: TextStyle(
+                        fontSize: 40.0,
+                        color: Color.fromRGBO(22, 102, 225, 1),
+                        fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
           SizedBox(
             height: 10.0,
           ),
